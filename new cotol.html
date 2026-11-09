@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Cotol Anglican Church | Welcome</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, serif;
+  scroll-behavior: smooth;
+}
+
+body { color: crimson; }
+
+header {
+  background: crimson;
+  color: white;
+  padding: 20px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: #e8c879;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+nav a:hover { color: #e8c879; }
+
+.hero {
+  min-height: 570px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 30px;
+  color: white;
+  background:
+  linear-gradient(#241039aa,#241039aa),
+  url("https://images.unsplash.com/photo-1438032005730-c779502df39b?w=1600")
+  center/cover;
+}
+.hero h1 {
+  font-size: clamp(35px, 6vw, 62px);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 19px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #d5b45b;
+  color: #35104f;
+  padding: 14px 27px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+section {
+  padding: 75px 8%;
+  text-align: center;
+}
+
+h2 {
+  color: #35104f;
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 750px;
+  margin: auto;
+  line-height: 1.9;
+}
+
+.services, .ministries {
+  background: #f7f4fa;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(220px,1fr));
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.card {
+  padding: 30px;
+  background: white;
+  border-bottom: 4px solid #d5b45b;
+  box-shadow: 0 5px 18px #00000010;
+  border-radius: 7px;
+}
+
+.card h3 {
+  color: #35104f;
+  margin-bottom: 15px;
+}
+
+.card p {
+  line-height: 1.7;
+}
+
+.vicar {
+  background: #35104f;
+  color: white;
+}
+
+.vicar h2 { color: #e8c879; }
+
+.vicar p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.9;
+}
+
+.events {
+  background: #f7f4fa;
+}
+
+.event {
+  max-width: 700px;
+  margin: 15px auto;
+  padding: 22px;
+  background: white;
+  border-left: 5px solid #d5b45b;
+  text-align: left;
+}
+
+.event h3 { color: #35104f; }
+
+footer {
+  background: #210b32;
+  color: white;
+  text-align: center;
+  padding: 40px 15px;
+}
+
+footer p {
+  margin-top: 12px;
+  color: #ddd;
+}
+
+.menu {
+  display: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media(max-width: 768px) {
+  .menu { display: block; }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #35104f;
+    width: 100%;
+    padding: 20px;
+  }
+
+  nav.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav a { margin: 12px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">✝  COTOL ANGLICAN CHURCH</div>
+
+  <div class="menu" onclick="toggleMenu()">☰</div>
+
+  <nav id="nav">
+    <a href ="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#ministries">Ministries</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <div>
+    <h1>Welcome to God's House</h1>
+    <p>Worship God. Grow in Faith. Serve Humanity.</p>
+    <a href="#services" class="btn">Join Our Worship</a>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <h2>About Our Church</h2>
+  <p>
+    Welcome to our Anglican Church, a community of faith,
+    love and fellowship. Rooted in Scripture and guided by
+    the traditions of the Anglican Communion, we gather
+    to worship God, grow spiritually and serve our community.
+  </p>
+</section>
+
+<section class="services" id="services">
+  <h2>Our Worship Services</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Holy Communion</h3>
+      <p>Sunday<br>8:00 AM</p>
+    </div>
+
+    <div class="card">
+      <h3>Sunday School</h3>
+      <p>Sunday<br>5:00 PM</p>
+    </div>
+
+    <div class="card">
+      <h3>Bible Study</h3>
+      <p>Wednesday<br>5:00 PM</p>
+    </div>
+
+    <div class="card">
+      <h3>Evening Prayer</h3>
+      <p>Friday<br>5:00 PM</p>
+    </div>
+  </div>
+</section>
+
+<section class="vicar">
+  <h2>A Message From Our Vicar</h2>
+  <p>
+    Beloved in Christ, you are warmly welcome to God's
+    family. May the love of Christ fill your heart,
+    strengthen your faith and guide your daily life.
+    We look forward to worshipping with you.
+  </p>
+  <br>
+  <strong>God bless you!</strong>
+</section>
+
+<section class="ministries" id="ministries">
+  <h2>Our Church Societies</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Women's Ministry</h3>
+      <p>Building women of faith and godly character.</p>
+    </div>
+
+    <div class="card">
+      <h3>Youth Fellowship</h3>
+      <p>Raising young people to serve Christ with all diligence.</p>
+    </div>
+
+    <div class="card">
+      <h3>Men's Fellowship</h3>
+      <p>Encouraging leadership and brotherhood.</p>
+    </div>
+
+    <div class="card">
+      <h3>Children's Ministery</h3>
+      <p>Teaching children to love and serve God.</p>
+    </div>
+  </div>
+</section>
+
+<section class="events" id="events">
+  <h2>Church Announcements</h2>
+
+  <div class="event">
+    <h3>Sunday Worship</h3>
+    <p>Join us this Sunday for Holy Communion.</p>
+  </div>
+
+  <div class="event">
+    <h3>Annual Harvest Thanksgiving</h3>
+    <p>Come together to celebrate God's faithfulness.</p>
+  </div>
+
+  <div class="event">
+    <h3>Youth Convention</h3>
+    <p>A special gathering for our young people.</p>
+  </div>
+
+  <div class="event">
+    <h3>Synod 2027</h3>
+    <p>Join us as we worship the lord thi upcoming synod</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Our Church</h2>
+  <p>Email: yourchurch@email.com</p>
+  <p>Phone: +234 800 000 0000</p>
+  <p>Address: Your Church Address</p>
+  <br>
+  <a class="btn" href="mailto:yourchurch@email.com">
+    Contact Us
+  </a>
+</section>
+
+<footer>
+  <h2 style="color:#e8c879">✝Cotol Anglican Church</h2>
+  <p>One Faith. One Family. One Lord.</p>
+  <p>© 2026 Cotol Anglican Church. All Rights Reserved.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("nav").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
+
